@@ -1,0 +1,142 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.btn {
+  &--primary {
+    @include button($color-primary);
+  }
+}
+
+.card-category {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: $color-text;
+
+  &__img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 381 / 480;
+    object-fit: cover;
+    border-radius: $radius;
+    transition: transform 0.3s;
+  }
+
+  &__title {
+    margin: 1.25rem 0 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  &:hover &__img,
+  &:focus-visible &__img {
+    transform: scale(1.03);
+  }
+}
+
+.btn {
+  &--white {
+    @include button($color-white, $color-primary);
+    padding: 0.875rem 4rem;
+  }
+}
+
+.card-product {
+  position: relative;
+  overflow: hidden;
+  background: $color-bg-light;
+
+  &__media {
+    position: relative;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 285 / 301;
+    object-fit: cover;
+  }
+
+  &__badge {
+    @include flex-center;
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: $color-white;
+    border-radius: 50%;
+
+    &--discount { background: $color-badge-discount; }
+    &--new      { background: $color-badge-new; }
+  }
+
+  &__body {
+    padding: 1rem 1rem 1.75rem;
+  }
+
+  &__title {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $color-text;
+  }
+
+  &__desc {
+    margin: 0 0 0.75rem;
+    color: $color-muted;
+  }
+
+  &__price {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $color-text;
+  }
+
+  &__old-price {
+    margin-left: 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $color-muted;
+    text-decoration: line-through;
+  }
+
+  // Capa que aparece al pasar el ratón
+  &__overlay {
+    @include flex-center(column);
+    position: absolute;
+    inset: 0;
+    gap: 1.5rem;
+    background: rgba($color-text, 0.72);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 1.25rem;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-weight: 600;
+      color: $color-white;
+      text-decoration: none;
+
+      &:hover { text-decoration: underline; }
+    }
+
+    img { filter: invert(1); } // iconos oscuros → blancos
+  }
+
+  &:hover &__overlay,
+  &:focus-within &__overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

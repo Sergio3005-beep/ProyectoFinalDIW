@@ -7,6 +7,106 @@
     <title>practicafinal</title>
   </head>
   <body>
+
+      <header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="header__logo">
+      <img src="/src/assets/icons/furnirologo.png" alt="" width="32" height="32">
+      <span>Furniro</span>
+    </a>
+
+    <nav class="header__nav" id="main-nav" aria-label="Principal">
+      <ul class="header__menu">
+        <li><a class="header__link" href="index.html">Home</a></li>
+        <li><a class="header__link" href="#">Shop</a></li>
+        <li><a class="header__link" href="#">About</a></li>
+        <li><a class="header__link" href="formulario.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <a href="#" aria-label="Mi cuenta"><img src="/src/assets/icons/usuario.png" alt="" width="24" height="24"></a>
+      <a href="#" aria-label="Buscar"><img src="/src/assets/icons/lupa.png" alt="" width="24" height="24"></a>
+      <a href="#" aria-label="Favoritos"><img src="/src/assets/icons/corazon.png" alt="" width="24" height="24"></a>
+      <a href="#" aria-label="Carrito"><img src="/src/assets/icons/carrito.png" alt="" width="24" height="24"></a>
+
+      <button class="header__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">☰</button>
+    </div>
+  </div>
+</header>
+    <section class="hero">
+  <div class="container hero__inner">
+    <div class="hero__card">
+      <p class="hero__eyebrow">New Arrival</p>
+      <h1 class="hero__title">Discover Our New Collection</h1>
+      <p class="hero__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
+      </p>
+      <a href="#" class="btn btn--primary">Buy now</a>
+    </div>
+  </div>
+</section>
+    <section class="section range">
+  <div class="container">
+    <header class="section__header">
+      <h2 class="section__title">Browse The Range</h2>
+      <p class="section__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </header>
+
+    <div class="range__grid">
+      <a href="#" class="card-category">
+        <img class="card-category__img" src="/src/assets/images/mesilla.png" alt="Comedor">
+        <h3 class="card-category__title">Dining</h3>
+      </a>
+
+      <a href="#" class="card-category">
+        <img class="card-category__img" src="/src/assets/images/dormitorio.png" alt="Salón">
+        <h3 class="card-category__title">Living</h3>
+      </a>
+
+      <a href="#" class="card-category">
+        <img class="card-category__img" src="/src/assets/images/cogin.png" alt="Dormitorio">
+        <h3 class="card-category__title">Bedroom</h3>
+      </a>
+    </div>
+  </div>
+</section>
+    <section class="section products">
+  <div class="container">
+    <header class="section__header">
+      <h2 class="section__title">Our Products</h2>
+    </header>
+
+    <div class="products__grid">
+      <article class="card-product">
+        <div class="card-product__media">
+          <img class="card-product__img" src="/src/assets/images/product1.jpg" alt="Silla de café Syltherine">
+          <span class="card-product__badge card-product__badge--discount">-30%</span>
+        </div>
+
+        <div class="card-product__body">
+          <h3 class="card-product__title">Syltherine</h3>
+          <p class="card-product__desc">Stylish cafe chair</p>
+          <p class="card-product__price">
+            Rp 2.500.000
+            <span class="card-product__old-price">Rp 3.500.000</span>
+          </p>
+        </div>
+
+        <div class="card-product__overlay">
+          <a href="#" class="btn btn--white">Add to cart</a>
+          <div class="card-product__actions">
+            <a href="#"><img src="/src/assets/icons/share.svg" alt="" width="16" height="16"> Share</a>
+            <a href="#"><img src="/src/assets/icons/compare.svg" alt="" width="16" height="16"> Compare</a>
+            <a href="#"><img src="/src/assets/icons/like.svg" alt="" width="16" height="16"> Like</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Repite el <article> para Leviosa, Lolito (-50%) y Respira (badge --new) -->
+    </div>
+  </div>
+</section>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
