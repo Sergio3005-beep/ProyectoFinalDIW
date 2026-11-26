@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Furniro | Contact</title>
+   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Furniro | Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <!-- la cabecera idéntica a la de index.html, con aria-current en Contact -->
+     <div class="container header__inner">
+    <a href="index.html" class="header__logo">
+      <img src="/src/assets/icons/furnirologo.png" alt="" width="32" height="32">
+      <span>Furniro</span>
+    </a>
+
+    <nav class="header__nav" id="main-nav" aria-label="Principal">
+      <ul class="header__menu">
+        <li><a class="header__link" href="index.html">Home</a></li>
+        <li><a class="header__link" href="#">Shop</a></li>
+        <li><a class="header__link" href="#">About</a></li>
+        <li><a class="header__link" href="formulario.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <a href="#" aria-label="Mi cuenta"><img src="/src/assets/icons/usuario.png" alt="" width="24" height="24"></a>
+      <a href="#" aria-label="Buscar"><img src="/src/assets/icons/lupa.png" alt="" width="24" height="24"></a>
+      <a href="#" aria-label="Favoritos"><img src="/src/assets/icons/corazon.png" alt="" width="24" height="24"></a>
+      <a href="#" aria-label="Carrito"><img src="/src/assets/icons/carrito.png" alt="" width="24" height="24"></a>
+
+      <button class="header__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">☰</button>
+    </div>
+  </div>
+  </header>
+
+  <main>
+    <!-- aquí irá el contenido del formulario (siguiente paso) -->
+       <section class="page-hero">
+    <div class="container">
+      <h1 class="page-hero__title">Contact</h1>
+      <nav class="page-hero__breadcrumb" aria-label="Migas de pan">
+        <a href="index.html">Home</a>
+        <span class="page-hero__sep" aria-hidden="true">›</span>
+        <span>Contact</span>
+      </nav>
+    </div>
+  </section>
+
+  <section class="section contact">
+    <div class="container">
+      <header class="section__header">
+        <h2 class="section__title">Get In Touch With Us</h2>
+        <p class="section__subtitle">
+          For more information about our products &amp; services, feel free to drop us a message.
+        </p>
+      </header>
+
+      <div class="contact__grid">
+        <div class="contact__info">
+          <div class="contact-item">
+            <img class="contact-item__icon" src="/src/assets/icons/location.svg" alt="" width="24" height="24">
+            <div>
+              <h3 class="contact-item__title">Address</h3>
+              <p class="contact-item__text">Sawojajar Malang, Indonesia</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <img class="contact-item__icon" src="/src/assets/icons/phone.svg" alt="" width="24" height="24">
+            <div>
+              <h3 class="contact-item__title">Phone</h3>
+              <p class="contact-item__text">+6289 456 3455</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <img class="contact-item__icon" src="/src/assets/icons/clock.svg" alt="" width="24" height="24">
+            <div>
+              <h3 class="contact-item__title">Working Time</h3>
+              <p class="contact-item__text">Monday - Friday: 9:00 - 22:00</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="form">
+          <div class="form__row">
+            <div class="field">
+              <label class="field__label" for="name">Your name</label>
+              <input class="field__input" id="name" name="name" type="text" placeholder="Your name" required>
+            </div>
+            <div class="field">
+              <label class="field__label" for="email">Email address</label>
+              <input class="field__input" id="email" name="email" type="email" placeholder="Email address" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="subject">Subject</label>
+            <input class="field__input" id="subject" name="subject" type="text" placeholder="This is optional">
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="message">Message</label>
+            <textarea class="field__input field__input--textarea" id="message" name="message" placeholder="Hi! I'd like to ask about..." required></textarea>
+          </div>
+
+          <button class="btn btn--primary form__submit" type="submit">Submit</button>
+          <p class="form__status" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="footer">
+    <!-- el footer idéntico al de index.html -->
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

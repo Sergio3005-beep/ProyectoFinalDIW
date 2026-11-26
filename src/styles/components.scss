@@ -140,3 +140,127 @@
     pointer-events: auto;
   }
 }
+
+.newsletter {
+  display: flex;
+
+  &__input {
+    flex: 1;
+    min-width: 0;            // evita que desborde en columnas estrechas
+    padding: 0.75rem 1rem;
+    font-family: inherit;
+    font-size: 0.875rem;
+    color: $color-text;
+    background: $color-bg-light;
+    border: 0;
+
+    &::placeholder { color: $color-muted; }
+
+    &:focus-visible {
+      outline: 2px solid $color-accent;
+      outline-offset: -2px;
+    }
+  }
+
+  &__btn {
+    @include flex-center;
+    flex-shrink: 0;
+    width: 3rem;
+    background: $color-accent;
+    border: 0;
+    cursor: pointer;
+    transition: opacity 0.2s;
+
+    &:hover,
+    &:focus-visible { opacity: 0.85; }
+  }
+}
+
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+
+  &__icon { margin-top: 0.25rem; }
+
+  &__title {
+    margin: 0 0 0.25rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $color-black;
+  }
+
+  &__text {
+    margin: 0;
+    color: $color-muted;
+  }
+}
+
+.form {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem 1.5rem;
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+
+  @include respond-to('md') {
+    padding: 2.5rem;
+  }
+
+  &__row {
+    display: grid;
+    gap: 1.5rem;
+
+    @include respond-to('md') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__submit { justify-self: start; }
+
+  &__status {
+    margin: 0;
+    font-weight: 500;
+    color: $color-primary;
+
+    &:empty { display: none; }
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &__label {
+    font-weight: 600;
+    color: $color-text;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font: inherit;
+    color: $color-text;
+    background: $color-bg-light;
+    border: 1px solid transparent;
+    border-radius: $radius;
+    transition: border-color 0.2s;
+
+    &::placeholder { color: $color-muted; }
+
+    &:focus-visible {
+      outline: none;
+      border-color: $color-primary;
+    }
+
+    &:user-invalid { border-color: $color-error; }
+
+    &--textarea {
+      min-height: 9rem;
+      resize: vertical;
+    }
+  }
+}

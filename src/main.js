@@ -7,3 +7,12 @@ toggle?.addEventListener('click', () => {
   const open = nav.classList.toggle('is-open')
   toggle.setAttribute('aria-expanded', open)
 })
+
+const form = document.querySelector('.form')
+const status = document.querySelector('.form__status')
+
+form?.addEventListener('submit', (e) => {
+  e.preventDefault()
+  form.reset()
+  status.textContent = '¡Gracias! Hemos recibido tu mensaje.'
+})
