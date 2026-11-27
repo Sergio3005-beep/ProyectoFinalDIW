@@ -21,7 +21,7 @@
 
     @include respond-to('lg') {
       display: grid;
-      grid-template-columns: 1fr auto 1fr; // logo | menú centrado | iconos
+      grid-template-columns: 1fr auto 1fr; 
     }
   }
 
@@ -35,7 +35,6 @@
     text-decoration: none;
   }
 
-  // Móvil: menú desplegable bajo la cabecera
   &__nav {
     display: none;
     position: absolute;
@@ -272,9 +271,6 @@
     }
   }
 }
-
-
-
 
 .page-hero {
   padding: 3rem 0;

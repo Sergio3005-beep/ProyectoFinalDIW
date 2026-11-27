@@ -104,7 +104,6 @@
     text-decoration: line-through;
   }
 
-  // Capa que aparece al pasar el ratón
   &__overlay {
     @include flex-center(column);
     position: absolute;
@@ -131,7 +130,7 @@
       &:hover { text-decoration: underline; }
     }
 
-    img { filter: invert(1); } // iconos oscuros → blancos
+    img { filter: invert(1); } 
   }
 
   &:hover &__overlay,
@@ -146,7 +145,7 @@
 
   &__input {
     flex: 1;
-    min-width: 0;            // evita que desborde en columnas estrechas
+    min-width: 0;            
     padding: 0.75rem 1rem;
     font-family: inherit;
     font-size: 0.875rem;
